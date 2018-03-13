@@ -1,6 +1,6 @@
 #include <M5Stack.h>
 
-// the setup routine runs once when M5Stack starts up
+// the setup routine runs once when the M5Stack starts up
 void setup(){
 
   // initialize the M5Stack object
@@ -10,7 +10,7 @@ void setup(){
   M5.Lcd.println("This is software power off demo");
   M5.Lcd.println("Press the button A to power off.");
   
-  // Set the wakeup button
+  // Set the wakeup button to button A
   M5.setWakeupButton(BUTTON_A_PIN);
 }
 
