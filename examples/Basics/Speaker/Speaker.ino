@@ -27,31 +27,22 @@
 
 
 void setup() {
-
   // Initialize the M5Stack object
   M5.begin();
   
   M5.Lcd.printf("M5Stack Speaker test:\r\n");
-  M5.Speaker.setVolume(8);
-  M5.Speaker.playMusic(m5stack_startup_music, 25000);
 }
 
 void loop() {
   if(M5.BtnA.wasPressed()) {
     M5.Lcd.printf("wasPressed A \r\n");
-    M5.Speaker.beep();
+    M5.Speaker.beep(); //beep
   }
 
   if(M5.BtnB.wasPressed())
   {
     M5.Lcd.printf("wasPressed B \r\n");
-    M5.Speaker.tone(3000, 200); //frequency 3000, durtion 200ms
-  }
-
-  if(M5.BtnC.wasPressed())
-  {
-    M5.Lcd.printf("wasPressed C \r\n");
-    M5.Speaker.playMusic(m5stack_startup_music, 25000);
+    M5.Speaker.tone(NOTE_DH2, 200); //frequency 3000, with a duration of 200ms
   }
 
   M5.update();
